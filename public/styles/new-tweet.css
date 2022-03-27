@@ -1,0 +1,44 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+
+.counter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.new-tweet-upper-half {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid rgb(48, 44, 44);
+  font-weight: 600;
+}
+
+.new-tweet-upper-half > textarea {
+  height: 40px;
+  color: #4b483e;
+  background-color: transparent;
+  font-weight: 600;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.tweet-submit-btn {
+  font-family: "Bungee";
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-submit-btn > button {
+  background-color: #4056a1;
+  color: #ffffff;
+  height: 1.65em;
+  width: 4.7em;
+}
