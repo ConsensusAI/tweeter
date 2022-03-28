@@ -1,0 +1,38 @@
+.tweets-view {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  outline-style: solid;
+  outline-color: rgba(51, 49, 49, 0.788);
+  padding: 0.7em;
+}
+
+.tweets-view img {
+  display: flex;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1a171775;
+}
+
+.tweet-body {
+  border-bottom: 4px solid;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 1em;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(51, 49, 49);
+}

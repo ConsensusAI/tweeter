@@ -19,12 +19,16 @@
 
 .new-tweet-upper-half > textarea {
   height: 40px;
-  color: #4b483e;
+  color: #5c5b58;
   background-color: transparent;
   font-weight: 600;
   border: none;
   resize: none;
   outline: none;
+}
+
+.new-tweet-upper-half > label {
+  color: #363635;
 }
 
 .tweet-submit-btn {
