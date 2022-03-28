@@ -42,3 +42,7 @@
   height: 1.65em;
   width: 4.7em;
 }
+
+.limitExceeded {
+  color: #d30707;
+}
