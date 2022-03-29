@@ -5,6 +5,8 @@ nav {
   color: #ffffff;
   padding: 1.5em;
   z-index: 9;
+  position: fixed;
+  top: 0%;
 }
 
 nav > span {
