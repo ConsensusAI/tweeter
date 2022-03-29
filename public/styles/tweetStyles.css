@@ -42,3 +42,12 @@ article.tweet header {
   align-items: center;
   color: rgb(51, 49, 49);
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-solid:hover {
+  color: #cfb624;
+}
