@@ -3,25 +3,30 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const escape = (str) => {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = (data) => {
   return `<article class="tweet">
   <header>
     <div class="user-info">
       <img
-        src=${data.user.avatars}"
+        src=${escape(data.user.avatars)}"
       />
-      <p>${data.user.name}</p>
+      <p>${escape(data.user.name)}</p>
     </div>
-    <p>${data.user.handle}</p>
+    <p>${escape(data.user.handle)}</p>
   </header>
   <div class="tweet-body">
     <p>
-      ${data.content.text}
+      ${escape(data.content.text)}
     </p>
   </div>
   <footer>
-    <p>${timeago.format(data.created_at)}</p>
+    <p>${timeago.format(escape(data.created_at))}</p>
     <div class="tweet-icons">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
@@ -68,14 +73,6 @@ $(document).ready(function () {
       console.log("reloading");
       loadTweets();
     });
-
-    // $.ajax("/tweets", { method: "POST", data: data })
-    //   .then(function (tweet) {
-    //     $("#tweet-text").val("");
-    //   })
-    //   .then(() => {
-    //     loadTweets();
-    //   });
   });
 
   loadTweets();
