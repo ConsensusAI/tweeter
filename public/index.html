@@ -69,7 +69,7 @@
     <main class="container">
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
-        <form action="/tweets" method="POST">
+        <form id="submit-new-tweet" action="/tweets" method="POST">
           <div class="new-tweet-upper-half">
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
@@ -81,33 +81,7 @@
         </form>
       </section>
 
-      <section class="tweets-view">
-        <article class="tweet">
-          <header>
-            <div class="user-info">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2048px-User_icon_2.svg.png"
-              />
-              <p>Newton</p>
-            </div>
-            <p>@SirIsaac</p>
-          </header>
-          <div class="tweet-body">
-            <p>
-              If I have seen further it is by standing on the shoulders of
-              giants
-            </p>
-          </div>
-          <footer>
-            <p>10 days ago</p>
-            <div class="tweet-icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article>
-      </section>
+      <section class="tweets-view" id="tweets-container"></section>
 
       <h1>Lorem Ipsum</h1>
       <h2>Lorem Ipsum</h2>
