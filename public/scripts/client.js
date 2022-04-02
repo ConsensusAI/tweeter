@@ -21,7 +21,7 @@ const createTweetElement = (data) => {
     </p>
   </div>
   <footer>
-    <p>${data.created_at}</p>
+    <p>${timeago.format(data.created_at)}</p>
     <div class="tweet-icons">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
@@ -47,9 +47,7 @@ $(document).ready(function () {
   });
 
   const loadTweets = () => {
-    console.log("loading..");
     $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
-      console.log("Success ", tweets);
       renderTweet(tweets);
     });
   };
