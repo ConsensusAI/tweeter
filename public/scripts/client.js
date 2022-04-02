@@ -32,25 +32,51 @@ const createTweetElement = (data) => {
 };
 
 const renderTweet = function (data) {
+  $("#tweets-container").empty();
+
   for (let tweet of data) {
     let $tweet = createTweetElement(tweet);
-    $("#tweets-container").append($tweet);
+    $("#tweets-container").prepend($tweet);
   }
+};
+
+const loadTweets = () => {
+  $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
+    renderTweet(tweets);
+  });
 };
 
 $(document).ready(function () {
   $("#submit-new-tweet").submit(function (event) {
     event.preventDefault();
-    let data = $(this).serialize();
-    console.log(data);
-    $.post("/tweets", data);
-  });
+    console.log($("#tweet-text"));
 
-  const loadTweets = () => {
-    $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
-      renderTweet(tweets);
+    // Handle Empty Tweets
+    if (!$("#tweet-text").val()) {
+      return alert("Cannot post an empty tweet.");
+    }
+
+    // Handle Long Tweets
+    if ($("#tweet-text").val().length > 140) {
+      return alert("Tweet cannot exceed 140 characters");
+    }
+
+    let data = $(this).serialize();
+
+    $.post("/tweets", data, function () {
+      $("#tweet-text").val("");
+      console.log("reloading");
+      loadTweets();
     });
-  };
+
+    // $.ajax("/tweets", { method: "POST", data: data })
+    //   .then(function (tweet) {
+    //     $("#tweet-text").val("");
+    //   })
+    //   .then(() => {
+    //     loadTweets();
+    //   });
+  });
 
   loadTweets();
 });
