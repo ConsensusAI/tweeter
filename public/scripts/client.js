@@ -58,13 +58,17 @@ $(document).ready(function () {
 
     // Handle Empty Tweets
     if (!$("#tweet-text").val()) {
-      return alert("Cannot post an empty tweet.");
+      return $(".errors").text("Cannot post an empty tweet.").slideDown();
     }
 
     // Handle Long Tweets
     if ($("#tweet-text").val().length > 140) {
-      return alert("Tweet cannot exceed 140 characters");
+      return $(".errors")
+        .text("Tweet cannot exceed 140 characters")
+        .slideDown(0);
     }
+
+    $(".errors").text("").hide();
 
     let data = $(this).serialize();
 
