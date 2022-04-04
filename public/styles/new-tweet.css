@@ -10,6 +10,7 @@
   justify-content: flex-end;
 }
 
+/* Formatting above the border*/
 .new-tweet-upper-half {
   display: flex;
   flex-direction: column;
@@ -31,6 +32,7 @@
   color: #363635;
 }
 
+/* Button Formatting */
 .tweet-submit-btn {
   font-family: "Bungee";
   margin-top: 10px;
@@ -47,6 +49,7 @@
   width: 4.7em;
 }
 
+/* Color change for counter when character limit is exceeded */
 .limitExceeded {
   color: #d30707;
 }

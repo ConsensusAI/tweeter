@@ -3,12 +3,14 @@
   flex-direction: column;
 }
 
+/* Tweet Formatting */
 article.tweet {
   margin-top: 1em;
   border: 5px solid rgba(51, 49, 49, 0.788);
   padding: 0.7em;
 }
 
+/* Shadow effect when hovering a tweet */
 article.tweet:hover {
   box-shadow: 5px 5px #7a8cad;
 }
@@ -48,6 +50,7 @@ footer {
   justify-content: space-between;
 }
 
+/* Color change when hovering icons under tweet */
 .fa-solid:hover {
   color: #cfb624;
 }

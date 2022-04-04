@@ -26,6 +26,11 @@ nav > span {
   animation: updown 2s ease infinite;
 }
 
+.bold {
+  font-weight: 600;
+}
+
+/* Animation for angle-down icon */
 @keyframes updown {
   0% {
     transform: translateY(-10%);
@@ -38,8 +43,4 @@ nav > span {
   100% {
     transform: translateY(-10%);
   }
-}
-
-.bold {
-  font-weight: 600;
 }
