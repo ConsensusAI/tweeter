@@ -28,6 +28,11 @@ Mobile View ![Mobile View](https://github.com/ConsensusAI/tweeter/blob/master/pu
 
 - Implement functions for icons under tweets (flag, retweet, like)
 - Jump to new tweet box when clicking arrow in nav to write a new tweet
-- User authentication handling
+- User authentication handling and posting as yourself
 
 ## Acknowledgements
+
+1. Shoutout to @kvirani and @lighthouse-labs for guiding me along this learning journey. [Check them out!](https://www.lighthouselabs.ca/) [^1]
+2. Thank you to the developers who created and shared the node modules used.
+
+[^1]: https://github.com/lighthouse-labs/
