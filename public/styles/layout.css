@@ -35,3 +35,35 @@ body > main {
   flex-direction: column;
   background-color: #f4f1ec;
 }
+
+/* Responsive Design */
+
+@media screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  body > header {
+    width: 33%;
+    float: left;
+    margin-top: 200px;
+  }
+
+  .container {
+    width: 55%;
+    float: right;
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body > nav {
+    background-color: rgb(171, 171, 219);
+  }
+
+  body > header {
+    background-color: rgb(171, 171, 219);
+    background-image: none;
+  }
+}

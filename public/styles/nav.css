@@ -23,6 +23,21 @@ nav > span {
   justify-content: flex-end;
   margin-right: 3em;
   color: #ff4500;
+  animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
 }
 
 .bold {
