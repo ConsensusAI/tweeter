@@ -4,6 +4,9 @@ Tweeter is a simple, single-page Twitter clone. It is built using AJAX, jQuery, 
 
 ## Final Product
 
+Desktop View ![Desktop View]()
+Mobile View ![Mobile View]()
+
 ## Getting Started
 
 1. Install dependencies using the `npm install` command.
@@ -16,5 +19,15 @@ Tweeter is a simple, single-page Twitter clone. It is built using AJAX, jQuery, 
 - Node 5.10.x or above
 
 ## Features
+
+- Users can post tweets that show up immediately
+- Tweets can keep track of how long ago they were posted
+- Tweets can contain user data such as handle and username
+
+## What's Next?
+
+- Implement functions for icons under tweets (flag, retweet, like)
+- Jump to new tweet box when clicking arrow in nav to write a new tweet
+- User authentication handling
 
 ## Acknowledgements
