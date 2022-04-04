@@ -4,8 +4,8 @@ Tweeter is a simple, single-page Twitter clone. It is built using AJAX, jQuery, 
 
 ## Final Product
 
-Desktop View ![Desktop View]()
-Mobile View ![Mobile View]()
+Desktop View ![Desktop View](https://github.com/ConsensusAI/tweeter/blob/master/public/images/tweeter-1.png)
+Mobile View ![Mobile View](https://github.com/ConsensusAI/tweeter/blob/master/public/images/tweeter-2.png)
 
 ## Getting Started
 
