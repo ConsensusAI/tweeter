@@ -6,13 +6,16 @@
 
 // Function to prevent cross-site scripting
 const escape = (str) => {
+  // Create a new div node
   let div = document.createElement("div");
+  // Add passed in string as text to new div
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
 // Creates a new tweet element using passed in data
 const createTweetElement = (data) => {
+  // HTML nodes that define a tweet
   return `<article class="tweet">
   <header>
     <div class="user-info">
@@ -47,12 +50,14 @@ const renderTweet = function (data) {
   // Iterates over array of tweet objects
   for (let tweet of data) {
     let $tweet = createTweetElement(tweet);
+    // Add new tweet to the top of the page
     $("#tweets-container").prepend($tweet);
   }
 };
 
 // Function to fetch tweets and run the render function
 const loadTweets = () => {
+  // Call GET to the tweets route that houses an array of tweet objects
   $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
     renderTweet(tweets);
   });
@@ -60,17 +65,20 @@ const loadTweets = () => {
 
 // Waits for DOM to be loaded in
 $(document).ready(function () {
+  // jQuery shorthand to submit a form
   $("#submit-new-tweet").submit(function (event) {
+    // Prevent default activity of form submit
     event.preventDefault();
-    console.log($("#tweet-text"));
 
     // Handle Empty Tweets
     if (!$("#tweet-text").val()) {
+      // Show error with effect
       return $(".errors").text("Cannot post an empty tweet.").slideDown();
     }
 
     // Handle Long Tweets
     if ($("#tweet-text").val().length > 140) {
+      // Show error with effect
       return $(".errors")
         .text("Tweet cannot exceed 140 characters")
         .slideDown(0);
